@@ -5,7 +5,7 @@ Import-Module NetSecurity
 iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 
 # Install packages from Chocolatey
-choco install -y cmake altdrag 7zip.install steam jre8 git googlechrome bonjour
+choco install -y cmake altdrag 7zip.install steam jre8 git googlechrome bonjour ninja
 
 # Add things to PATH
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Program Files\CMake\bin", [EnvironmentVariableTarget]::Machine)

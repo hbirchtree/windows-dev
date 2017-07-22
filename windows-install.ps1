@@ -5,7 +5,7 @@ Import-Module NetSecurity
 iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 
 # Install packages from Chocolatey
-choco install -y cmake altdrag 7zip.install steam jre8 git googlechrome bonjour ninja
+choco install -y cmake altdrag 7zip.install steam jre8 git googlechrome bonjour ninja bitvise-ssh-server nuget.commandline
 
 # Add things to PATH
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Program Files\CMake\bin", [EnvironmentVariableTarget]::Machine)
@@ -92,8 +92,8 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUn
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowAllTrustedApps" /d "1"
 
 # Enable pinging on IPv4 and IPv6
-New-NetFirewallRule -Name Allow_Pingv4 -DisplayName ìEcho Request ñ IPv4î -Protocol ICMPv4 -IcmpType 8 -Profile Any -Action Allow
-New-NetFirewallRule -Name Allow_Pingv6 -DisplayName ìEcho Request ñ IPv6î -Protocol ICMPv6 -IcmpType 8 -Profile Any -Action Allow
+New-NetFirewallRule -Name Allow_Pingv4 -DisplayName ‚ÄúEcho Request ‚Äì IPv4‚Äù -Protocol ICMPv4 -IcmpType 8 -Profile Any -Action Allow
+New-NetFirewallRule -Name Allow_Pingv6 -DisplayName ‚ÄúEcho Request ‚Äì IPv6‚Äù -Protocol ICMPv6 -IcmpType 8 -Profile Any -Action Allow
 
 
 # Unused commands
